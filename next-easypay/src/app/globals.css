@@ -76,6 +76,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* PluxNet Fibre Brand Colors */
+  --pluxnet-astronaut: #262c6e;
+  --pluxnet-mulberry: #c23e94;
+  --pluxnet-vivid-violet: #833493;
+  --pluxnet-apricot: #ec897c;
+  --pluxnet-astronaut-rgb: 38, 44, 110;
+  --pluxnet-mulberry-rgb: 194, 62, 148;
+  --pluxnet-vivid-violet-rgb: 131, 52, 147;
+  --pluxnet-apricot-rgb: 236, 137, 124;
 }
 
 .dark {
@@ -116,7 +126,41 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* PluxNet Fibre Brand Utility Classes */
+.pluxnet-gradient {
+  background: linear-gradient(135deg, var(--pluxnet-astronaut) 0%, var(--pluxnet-mulberry) 100%);
+}
+
+.pluxnet-gradient-secondary {
+  background: linear-gradient(135deg, var(--pluxnet-vivid-violet) 0%, var(--pluxnet-apricot) 100%);
+}
+
+.text-pluxnet-primary {
+  color: var(--pluxnet-astronaut);
+}
+
+.text-pluxnet-secondary {
+  color: var(--pluxnet-mulberry);
+}
+
+.bg-pluxnet-primary {
+  background-color: var(--pluxnet-astronaut);
+}
+
+.bg-pluxnet-secondary {
+  background-color: var(--pluxnet-mulberry);
+}
+
+.border-pluxnet-primary {
+  border-color: var(--pluxnet-astronaut);
+}
+
+.border-pluxnet-secondary {
+  border-color: var(--pluxnet-mulberry);
 }

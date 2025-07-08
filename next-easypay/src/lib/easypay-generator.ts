@@ -47,7 +47,7 @@ export class EasyPayGenerator {
      */
     public static formatForDisplay(easyPayNumber: string): string {
         // Add chevrons prefix
-        const chevrons = '>>>>>> ';
+        // const chevrons = '>>>>>> ';
 
         // Group the number into chunks of 4 digits
         const groups = [];
@@ -55,7 +55,8 @@ export class EasyPayGenerator {
             groups.push(easyPayNumber.substring(i, i + 4));
         }
 
-        return chevrons + groups.join(' ');
+        // return chevrons + groups.join(' ');
+        return groups.join(' ');
     }
 
     /**
